@@ -6,57 +6,74 @@
   <title>Hasan Mahmud - Resume</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5;
       margin: 0;
-      padding: 2rem;
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+      padding: 0;
     }
 
     .container {
-      max-width: 960px;
+      max-width: 1000px;
       margin: 0 auto;
-      background: #fff;
+      background: white;
       padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .header {
-      text-align: center;
-      margin-bottom: 2rem;
+    nav {
+      background: #007acc;
+      padding: 0.75rem 2rem;
     }
 
-    .header h1 {
-      font-size: 2rem;
+    nav .menu {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
       margin: 0;
+      font-size: 2rem;
     }
 
-    .header h2 {
-      font-size: 1rem;
-      color: #666;
-      margin: 0.2rem 0;
+    h2 {
+      margin: 0.3rem 0;
+      font-size: 1.1rem;
+      font-weight: normal;
     }
 
     .contact {
-      font-size: 0.9rem;
       margin-top: 0.5rem;
+      font-size: 0.9rem;
     }
 
     .section {
-      margin-bottom: 2rem;
+      margin-top: 2rem;
     }
 
     .section h3 {
-      border-bottom: 2px solid #007acc;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      color: #007acc;
-      text-transform: uppercase;
+      margin-bottom: 0.5rem;
       font-size: 1rem;
+      text-transform: uppercase;
+      color: #007acc;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 0.25rem;
     }
 
-    .two-col {
+    .two-column {
       display: flex;
       gap: 2rem;
       flex-wrap: wrap;
@@ -64,146 +81,165 @@
 
     .column {
       flex: 1;
-      min-width: 260px;
+      min-width: 280px;
     }
 
     ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
+      padding-left: 1.2rem;
     }
 
-    ul.skills-grid {
+    .skills-grid, .projects-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 0.5rem;
+      list-style: none;
+      padding: 0;
     }
 
-    ul.skills-grid li {
-      background: #007acc;
-      color: #fff;
-      padding: 0.4rem;
+    .skills-grid li {
+      background-color: #007acc;
+      color: white;
+      padding: 0.5rem;
       text-align: center;
       border-radius: 4px;
       font-size: 0.85rem;
     }
 
-    .lang-bar {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .lang-bar .dot {
-      height: 10px;
-      width: 10px;
-      background-color: #000;
-      border-radius: 50%;
-      display: inline-block;
-    }
-
-    .project-link {
-      display: block;
+    .languages div {
       margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-      color: #007acc;
-      text-decoration: none;
     }
 
-    .project-link:hover {
-      text-decoration: underline;
+    .languages .bar {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+
+    .bar span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 2px;
+      border-radius: 50%;
+      background: #ccc;
+    }
+
+    .bar span.filled {
+      background: #000;
     }
   </style>
 </head>
 <body>
+  <!-- Top Navigation Menu -->
+  <nav>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
   <div class="container">
-    <div class="header">
+    <!-- Header -->
+    <div>
       <h1>HASAN MAHMUD</h1>
       <h2>Software Engineer</h2>
       <div class="contact">
-        <p>📞 +8801577024370 | ✉️ hasan859727@gmail.com | <a href="https://github.com/dev-hasanmahmud" target="_blank">github.com/dev-hasanmahmud</a> | 🏠 Khilkhet, Dhaka-1229</p>
+        📞 +8801577024370 | ✉️ hasan859727@gmail.com |
+        <a href="https://github.com/dev-hasanmahmud">github.com/dev-hasanmahmud</a> |
+        🏠 Khilkhet, Dhaka-1229
       </div>
     </div>
 
+    <!-- Summary -->
     <div class="section">
       <h3>Summary</h3>
-      <p>Enthusiastic Software Engineer with 3+ years of experience, particularly in PHP and PHP-based full stack development. Proven track record in creating APIs, dashboards, implementations and data visualization. Adept at integrating RESTful APIs into systems and streamlining data processing. Seeking to apply my expertise in collaborative environments to develop innovative and web apps.</p>
+      <p>
+        Enthusiastic Software Engineer with 3+ years of experience, particularly in PHP and PHP-based full stack development.
+        Proven track record in creating APIs, dashboards, implementations and streamlined data processing.
+        Seeking to apply my expertise in collaborative environments to develop innovative and web apps.
+      </p>
     </div>
 
+    <!-- Experience -->
     <div class="section">
       <h3>Experience</h3>
-      <p><strong>Software Engineer</strong><br> EduInTech (02/2023 – Present) – West Shewrapara, Mirpur, Dhaka</p>
+      <p><strong>Software Engineer</strong> - EduInTech<br><em>02/2023 – Present | West Shewrapara, Mirpur, Dhaka</em></p>
       <ul>
-        <li>Developed scalable applications with PHP and Laravel, integrating REST APIs for services like bKash, Nagad.</li>
-        <li>Managed and maintained third-party APIs to optimize data retrieval and integration.</li>
-        <li>Database modeling using MySQL and Redis for efficient caching.</li>
-        <li>Mentored and supported team of junior developers, improving code quality and accelerated delivery.</li>
+        <li>Developed scalable applications with PHP and Laravel</li>
+        <li>Integrated REST APIs for services like bKash, Nagad</li>
+        <li>Optimized data retrieval using MySQL and Redis</li>
+        <li>Mentored junior developers to improve code quality</li>
       </ul>
 
-      <p><strong>Junior Software Engineer</strong><br> Business Automation Ltd (01/2022 – 01/2023) – Lalmatia, Dhaka</p>
+      <p><strong>Junior Software Engineer</strong> - Business Automation Ltd<br><em>01/2022 – 01/2023 | Lalmatia, Dhaka</em></p>
       <ul>
-        <li>Built software modules using PHP and Laravel.</li>
-        <li>Enhanced applications using MySQL and created responsive dashboards with VueJS.</li>
-        <li>Collaborated with business teams and coordinated with Git.</li>
+        <li>Built modules using PHP and Laravel</li>
+        <li>Created responsive dashboards with Vue.js</li>
+        <li>Collaborated with business teams using Git</li>
       </ul>
     </div>
 
-    <div class="section two-col">
+    <!-- Education and Courses -->
+    <div class="section two-column">
       <div class="column">
         <h3>Education</h3>
-        <p><strong>Bachelor of Computer Science & Engineering</strong><br>Bangladesh University (01/2020 – Present) – Mohammadpur, Dhaka</p>
-        <p><strong>Diploma in Telecommunication & Network Engineering</strong><br>Feni Computer Institute (02/2014 – 07/2018) – Feni</p>
+        <p><strong>BSc in CSE</strong> - Bangladesh University<br><em>01/2020 – Present</em></p>
+        <p><strong>Diploma in Telecommunication & Network Engineering</strong><br>Feni Computer Institute<br><em>02/2014 – 07/2018</em></p>
       </div>
-
       <div class="column">
         <h3>Courses</h3>
-        <p><strong>Web Development with PHP and Laravel Framework</strong><br>W3programmers Training Institute, Mohammadpur, Dhaka (02/2018 – 07/2018)</p>
-        <p>Completed a hands-on course focused on PHP, Laravel, HTML, CSS, JS, Bootstrap, Ajax, MySQL, and Laravel.</p>
+        <p><strong>Web Dev with PHP and Laravel</strong><br>W3programmers Training Institute<br><em>02/2018 – 07/2018</em></p>
+        <p>Focused on PHP, Laravel, HTML, CSS, JavaScript, MySQL, and REST APIs</p>
       </div>
     </div>
 
-    <div class="section two-col">
+    <!-- Skills -->
+    <div class="section">
+      <h3>Skills</h3>
+      <ul class="skills-grid">
+        <li>HTML</li><li>CSS</li><li>Javascript</li><li>jQuery</li>
+        <li>Bootstrap</li><li>TailwindCSS</li><li>Vue.js</li><li>React.js</li>
+        <li>PHP</li><li>OOP</li><li>Laravel</li><li>Lumen</li>
+        <li>REST API</li><li>SSLCommerz</li><li>DRY</li><li>SOLID</li>
+        <li>Design Patterns</li><li>MySQL</li><li>MongoDB</li><li>PostgreSQL</li>
+        <li>PHPUnit</li><li>CI/CD</li><li>cPanel</li><li>SSH</li>
+        <li>Jira</li><li>Linux</li>
+      </ul>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+      <h3>Projects</h3>
+      <ul class="projects-list">
+        <li><a href="https://apps.beza.gov.bd" target="_blank">➤ BEZA ERP</a></li>
+        <li><a href="https://cps.jubo.gov.bd" target="_blank">➤ Contest Management System</a></li>
+        <li><a href="https://binar.gov.bd" target="_blank">➤ Inventory Management System</a></li>
+        <li><a href="https://hrm.jubo.gov.bd" target="_blank">➤ School Management System</a></li>
+        <li><a href="https://trainingdemo.jubo.gov.bd" target="_blank">➤ School Management System</a></li>
+      </ul>
+    </div>
+
+    <!-- Additional Skills and Languages -->
+    <div class="section two-column">
       <div class="column">
         <h3>Additional Skills</h3>
         <ul>
-          <li>✅ Clear and Effective Communicator</li>
-          <li>✅ Resilient Multi-tasker</li>
-          <li>✅ Effective Team Player</li>
-          <li>✅ Quick Learner and Adaptable</li>
+          <li>✔ Clear and Effective Communicator</li>
+          <li>✔ Resilient Multi-tasker</li>
+          <li>✔ Effective Team Player</li>
+          <li>✔ Quick Learner and Adaptable</li>
         </ul>
       </div>
       <div class="column">
         <h3>Languages</h3>
-        <div class="lang-bar">
-          <span>Bangla</span>
-          <span>🔵🔵🔵🔵🔵</span>
-        </div>
-        <div class="lang-bar">
-          <span>English</span>
-          <span>🔵🔵🔵⚪⚪</span>
+        <div class="languages">
+          <div>Bangla <div class="bar"><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span></div></div>
+          <div>English <div class="bar"><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span></div></div>
         </div>
       </div>
-    </div>
-
-    <div class="section">
-      <h3>Skills</h3>
-      <ul class="skills-grid">
-        <li>HTML</li><li>CSS</li><li>Javascript</li><li>jQuery</li><li>Bootstrap</li>
-        <li>TailwindCSS</li><li>VueJs</li><li>ReactJs</li><li>PHP</li><li>OOP</li>
-        <li>Laravel</li><li>Lumen</li><li>RESTful API</li><li>SSLCommerz</li>
-        <li>DRY</li><li>SOLID</li><li>Design Patterns</li><li>MySQL</li>
-        <li>MongoDB</li><li>PostgreSQL</li><li>PHPUnit</li><li>CI/CD</li>
-        <li>cPanel</li><li>SSH</li><li>Jira</li><li>Linux</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h3>Projects</h3>
-      <a href="https://apps.beza.gov.bd/" class="project-link" target="_blank">➤ BEZA ERP (Bangladesh Economic Zones Authority)</a>
-      <a href="https://cps.jubo.gov.bd" class="project-link" target="_blank">➤ Contest Management System</a>
-      <a href="https://binar.gov.bd" class="project-link" target="_blank">➤ Inventory Management System</a>
-      <a href="https://hrm.jubo.gov.bd" class="project-link" target="_blank">➤ School Management System</a>
-      <a href="https://trainingdemo.jubo.gov.bd" class="project-link" target="_blank">➤ School Management System</a>
     </div>
   </div>
 </body>
