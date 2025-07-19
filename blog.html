@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laravel Blog – Hasan Mahmud</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: "Segoe UI", sans-serif;
+    }
+    .blog-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+    .blog-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .blog-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .blog-summary {
+      color: #555;
+    }
+    .container {
+      max-width: 768px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h1 class="mb-4 text-center">Laravel Blog Posts</h1>
+
+    <!-- Blog Post 1 -->
+    <div class="blog-card">
+      <div class="blog-title">Getting Started with Laravel 10: A Beginner’s Guide</div>
+      <p class="blog-summary">Learn how to install and set up a new Laravel 10 project. We cover routing, controllers, views, migrations, and basic MVC flow with hands-on examples.</p>
+      <a href="laravel-getting-started.html" class="btn btn-sm btn-primary">Read More</a>
+    </div>
+
+    <!-- Blog Post 2 -->
+    <div class="blog-card">
+      <div class="blog-title">Mastering Laravel Eloquent: Tips & Tricks</div>
+      <p class="blog-summary">Deep dive into Laravel's powerful ORM – Eloquent. Learn about relationships, scopes, accessors, mutators, and performance optimizations.</p>
+      <a href="laravel-getting-started.html" class="btn btn-sm btn-primary">Read More</a>
+    </div>
+
+    <!-- Blog Post 3 -->
+    <div class="blog-card">
+      <div class="blog-title">Building RESTful APIs in Laravel with Sanctum</div>
+      <p class="blog-summary">Step-by-step guide to building secure, token-based APIs using Laravel Sanctum. Includes user auth, middleware, API resources, and testing via Postman.</p>
+      <a href="laravel-getting-started.html" class="btn btn-sm btn-primary">Read More</a>
+    </div>
+
+    <!-- Blog Post 4 -->
+    <div class="blog-card">
+      <div class="blog-title">Laravel Livewire vs Inertia.js: Which One Should You Use?</div>
+      <p class="blog-summary">A side-by-side comparison between Livewire and Inertia.js in Laravel SPA development. Understand their pros, cons, and use-cases.</p>
+      <a href="laravel-getting-started.html" class="btn btn-sm btn-primary">Read More</a>
+    </div>
+
+    <!-- Blog Post 5 -->
+    <div class="blog-card">
+      <div class="blog-title">Using Queues and Jobs in Laravel for Background Processing</div>
+      <p class="blog-summary">Offload time-consuming tasks like sending emails or processing images using Laravel’s queue system. Learn to set up workers, retry logic, and failover.</p>
+      <a href="laravel-getting-started.html" class="btn btn-sm btn-primary">Read More</a>
+    </div>
+
+    <p class="text-center mt-4 text-muted">© 2025 Hasan Mahmud — All rights reserved</p>
+  </div>
+
+</body>
+</html>
