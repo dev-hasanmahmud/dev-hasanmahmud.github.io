@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Getting Started with Laravel 10 – Hasan Mahmud</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f9f9f9;
+      font-family: "Segoe UI", sans-serif;
+    }
+    .container {
+      max-width: 768px;
+      background: #fff;
+      margin-top: 50px;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      color: #222;
+    }
+    pre {
+      background: #f1f1f1;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="mb-4">Getting Started with Laravel 10: A Beginner’s Guide</h1>
+    <p><strong>By:</strong> Hasan Mahmud</p>
+    <p class="text-muted">Published: July 2025</p>
+
+    <hr />
+
+    <p>
+      Laravel is one of the most popular PHP frameworks, known for its elegant syntax and powerful tools. In this guide, we’ll walk through setting up a Laravel 10 project and understanding its basic components.
+    </p>
+
+    <h2>1. Prerequisites</h2>
+    <ul>
+      <li>PHP 8.1 or newer</li>
+      <li>Composer</li>
+      <li>MySQL / SQLite</li>
+      <li>Node.js (optional, for frontend tools)</li>
+    </ul>
+
+    <h2>2. Installing Laravel</h2>
+    <p>Run the following command to create a new Laravel project:</p>
+    <pre><code>composer create-project laravel/laravel blog-app</code></pre>
+
+    <h2>3. Directory Overview</h2>
+    <ul>
+      <li><code>app/</code> – Application logic (Models, Services, etc.)</li>
+      <li><code>routes/web.php</code> – Web routes</li>
+      <li><code>resources/views</code> – Blade templates</li>
+      <li><code>public/</code> – Public files (index.php, assets)</li>
+      <li><code>config/</code> – Configuration files</li>
+    </ul>
+
+    <h2>4. Creating a Route</h2>
+    <p>Edit <code>routes/web.php</code>:</p>
+    <pre><code>Route::get('/', function () {
+    return view('welcome');
+});</code></pre>
+
+    <h2>5. Creating a Controller</h2>
+    <p>Generate a controller using artisan:</p>
+    <pre><code>php artisan make:controller HomeController</code></pre>
+    <p>Edit it:</p>
+    <pre><code>public function index() {
+    return view('home');
+}</code></pre>
+
+    <h2>6. Creating a Blade View</h2>
+    <p>In <code>resources/views/home.blade.php</code>:</p>
+    <pre><code>&lt;h1&gt;Welcome to My Laravel App&lt;/h1&gt;</code></pre>
+
+    <h2>7. Database Setup</h2>
+    <p>In your <code>.env</code> file:</p>
+    <pre><code>DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=</code></pre>
+
+    <h2>8. Running Migrations</h2>
+    <pre><code>php artisan migrate</code></pre>
+
+    <h2>9. Running the Server</h2>
+    <pre><code>php artisan serve</code></pre>
+    <p>Your app will be running at <a href="http://localhost:8000">http://localhost:8000</a>.</p>
+
+    <hr />
+
+    <p>If you're just starting out with Laravel, this setup should give you a strong foundation. In future posts, we’ll cover more advanced topics such as authentication, Eloquent ORM, queues, events, and testing.</p>
+
+    <p class="text-muted">Thanks for reading!</p>
+
+    <hr />
+    <p class="text-center text-muted">© 2025 Hasan Mahmud — <a href="../index.html">Back to Portfolio</a></p>
+  </div>
+
+</body>
+</html>
