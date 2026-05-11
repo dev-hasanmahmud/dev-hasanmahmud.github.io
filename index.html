@@ -2,255 +2,243 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hasan Mahmud - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Website</title>
+
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f5f5;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      background: white;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    body {
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    /* Topbar */
+    header {
+      width: 100%;
+      background: #111;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
     }
 
     nav {
-      background: #f5f5f5;
-      padding: 0.75rem 2rem;
-    }
-
-    nav .menu {
-      max-width: 1000px;
-      margin: 0 auto;
+      width: 90%;
+      margin: auto;
       display: flex;
-      justify-content: flex-start;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    nav a {
-      color: #000000;
-      text-decoration: none;
+    .logo {
+      color: white;
+      font-size: 24px;
       font-weight: bold;
-      font-size: 0.95rem;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .menu {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #00bcd4;
+    }
+
+    /* Sections */
+    section {
+      min-height: 100vh;
+      padding: 120px 10%;
+    }
+
+    #home {
+      background: linear-gradient(to right, #00bcd4, #2196f3);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #about {
+      background: white;
+    }
+
+    #educations {
+      background: #e8f5e9;
+    }
+
+    #portfolio {
+      background: #fff3e0;
+    }
+
+    #contact {
+      background: #ede7f6;
     }
 
     h1 {
-      margin: 0;
-      font-size: 2rem;
+      margin-bottom: 20px;
+      font-size: 42px;
     }
 
     h2 {
-      margin: 0.3rem 0;
-      font-size: 1.1rem;
-      font-weight: normal;
+      margin-bottom: 15px;
+      font-size: 32px;
     }
 
-    .contact {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
+    p {
+      line-height: 1.8;
+      max-width: 700px;
     }
 
-    .section {
-      margin-top: 2rem;
-    }
-
-    .section h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-      text-transform: uppercase;
-      color: #000000;
-      border-bottom: 2px solid #000000;
-      padding-bottom: 0.25rem;
-    }
-
-    .two-column {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .column {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    .skills-grid, .projects-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 0.5rem;
-      list-style: none;
-      padding: 0;
-    }
-
-    .skills-grid li {
-      background-color: #f5f5f5;
-      color: #000000;
-      padding: 0.5rem;
+    /* Footer */
+    footer {
+      background: #111;
+      color: white;
       text-align: center;
-      border-radius: 4px;
-      font-size: 0.85rem;
+      padding: 20px;
     }
 
-    .languages div {
-      margin-bottom: 0.5rem;
-    }
+    /* Responsive */
+    @media(max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
 
-    .languages .bar {
-      display: inline-block;
-      margin-left: 0.5rem;
-    }
+      .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
-    .bar span {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      margin-right: 10px;
-      border-radius: 50%;
-      background: #ccc;
-    }
+      h1 {
+        font-size: 32px;
+      }
 
-    .bar span.filled {
-      background: #000;
+      h2 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Top Navigation Menu -->
-  <nav>
-    <div class="menu">
-      <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms & Conditions</a>
-    </div>
-  </nav>
 
-  <!-- Main Container -->
-  <div class="container" style="margin-bottom: 40px;">
-    <!-- Header -->
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">MyPortfolio</div>
+
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#educations">Education</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section id="home">
+    <h1>Welcome to My Portfolio</h1>
+    <p>
+      I am a passionate web developer creating modern and responsive websites using HTML, CSS, and JavaScript. 
+      I love building beautiful and user-friendly websites.
+      Seeking to apply my expertise in collaborative environments to develop innovative and website.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="about">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li><li>CSS</li><li>Javascript</li><li>jQuery</li>
+      <li>Bootstrap</li>
+      <li>PHP</li><li>OOP</li><li>MYSQL</li>
+    </ul>
+
+    </br></br>
+    <h2>Additional Skills</h2>
     <div>
-      <h1>HASAN MAHMUD</h1>
-      <h2>Software Engineer</h2>
-      <div class="contact">
-        📞 +8801754019430 | ✉️ hasan859727@gmail.com |
-        💻 <a href="https://github.com/dev-hasanmahmud" target="_blank" style="color: black;">github.com/dev-hasanmahmud</a> |
-        🌐 <a href="https://dev-hasanmahmud.github.io/" target="_blank" style="color: black;">dev-hasanmahmud.github.io</a> |
-        🏠 Uttara, Dhaka-1229
-      </div>
+      <p>Clear and Effective Communicator</p>
+      <p>Resilient Multi-tasker</p>
+      <p>Effective Team Player</p>
+      <p>Quick Learner and Adaptable</p>
     </div>
+  </section>
 
-    <!-- Summary and Additional Skills -->
-    <div class="section two-column">
-      <div class="column">
-        <h3>Summary</h3>
-        <p>
-          Enthusiastic Software Engineer with 3+ years of experience,
-          particularly in PHP and PHP-based full stack developments. Proven
-          track record in leading API developments, implementations and
-          microservice developments, resulting in high system uptime and
-          streamlined data processing. Seeking to apply my expertise in
-          collaborative environments to develop innovative and web apps.
-        </p>
-      </div>
-      <div class="column">
-        <h3>Additional Skills</h3>
-        <div>
-          <p style="line-height: 15px;">✔ Clear and Effective Communicator</p>
-          <p style="line-height: 15px;">✔ Resilient Multi-tasker</p>
-          <p style="line-height: 15px;">✔ Effective Team Player</p>
-          <p style="line-height: 15px;">✔ Quick Learner and Adaptable</p>
-        </div>
-      </div>
-    </div>
+  <!-- EDUCATIONS & COURSES -->
+  <section id="educations">
+    <h2>Educations</h2>
+    <p><strong>Diploma in Data Telecommunication & Network Engineering</strong><br>FENI COMPUTER INSTITUTE<br><em>06/2014 - 07/2018</em><br><em>Major Subjects: Computer Networking, Data Communication, Routing & Switching, Network Security, Mobile Communication</em>
+      <br><em>Tools/ Technology Used: Cisco Packet Tracer, MikroTik RouterOS, Linux (Ubuntu), UTP Cabling, Switch Configuration</em>
+    </p>
+    
+    </br></br>
+    <h2>Cources</h2>
+    <p><strong>Web Design</strong><br>W3schools.com<br><em>02/2021 - 07/2022</em></p>
+        <p>Completed a hands-on course focused on practical of Web development and covering technologies
+        such as HTML, CSS, JavaScript, Bootstrap, MySQL, and PHP.</p>
+  </section>
 
-    <!-- Experience and Skills -->
-    <div class="section two-column">
-      <div class="column">
-        <h3>Experience</h3>
-        <p><strong>Freelance Developer | Business Consultant</strong> - Freelance<br><em>05/2020 – Present | Uttara, Dhaka</em></p>
-        <ul>
-          <li>Developed scalable applications with PHP and Laravel, integrating
-            REST APIs for seamless functionality.</li>
-          <li>Developed and integrated RESTful APIs to optimize data management.</li>
-          <li>Boosted performance using MySQL and Redis for efficient caching.</li>
-          <li>Managed and supported a team of junior developers, improving
-            code quality and accelerating project delivery.</li>
-        </ul>
-  
-        <p><strong>Junior Software Engineer</strong> - Business Automation Ltd<br><em>10/2018 - 05/2020 | Mirpur DOHS, Dhaka</em></p>
-        <ul>
-          <li>Built robust applications using PHP and Laravel.</li>
-          <li>Enhanced performance using MySQL and created responsive
-            interfaces with Bootstrap.</li>
-          <li>Coordinated project versions and collaboration with Git.</li>
-        </ul>
-      </div>
-      <div class="column">
-        <h3>Skills</h3>
-        <ul class="skills-grid">
-          <li>HTML</li><li>CSS</li><li>Javascript</li><li>jQuery</li>
-          <li>Bootstrap</li><li>TailwindCSS</li><li>Vue.js</li><li>React.js</li>
-          <li>PHP</li><li>OOP</li><li>Laravel</li><li>Lumen</li>
-          <li>REST API</li><li>SSLCommerz</li><li>DRY</li><li>SOLID</li>
-          <li>Design Patterns</li><li>MySQL</li><li>MongoDB</li><li>PostgreSQL</li>
-          <li>PHPUnit</li><li>CI/CD</li><li>cPanel</li><li>SSH</li>
-          <li>Jira</li><li>Linux</li>
-        </ul>
-      </div>
-    </div>
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <ul>
+      <li><a href="https://dev-hasanmahmud.github.io/" target="_blank" style="color: black;">Personal Portfolio</a></li>
+    </ul>
+    <p>
+      Technology Used: HTML, CSS, Javascript.
+    </p>
+  </section>
 
-    <!-- Education and Courses -->
-    <div class="section two-column">
-      <div class="column">
-        <h3>EDUCATIONS</h3>
-        <p><strong>Diploma in Data Telecommunication & Network Engineering</strong><br>FENI COMPUTER INSTITUTE<br><em>06/2014 - 07/2018</em><br><em>Mohammadpur, Dhaka</em>
-          <br><em>Major Subjects: Computer Networking, Data Communication, Routing & Switching, Network Security, Mobile Communication</em>
-          <br><em>Tools/Tech Used: Cisco Packet Tracer, MikroTik RouterOS, Wireshark, Linux (Ubuntu), UTP Cabling, Switch Configuration</em>
-        </p>
-      </div>
-      <div class="column">
-        <h3>COURSES</h3>
-        <p><strong>Web Development with PHP and Laravel Framework</strong><br>W3PROGRAMMERS TRAINING INSTITUTE<br><em>02/2018 - 07/2018</em><br><em>Mohammadpur, Dhaka</em></p>
-        <p>Completed a hands-on course focused on practical applications of PHP
-        in both front-end and back-end development, covering technologies
-        such as HTML, CSS, JavaScript, Bootstrap, MySQL, and Laravel.</p>
-      </div>
-    </div>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: hasan@email.com <br>
+      Github: github.com/dev-hasanmahmud <br>
+      Address: Mohammadpur, Dhaka-1207 <br>
+    </p>
+  </section>
 
-    <!-- Projects and Languages -->
-    <div class="section two-column">
-      <div class="column">
-        <h3>Projects</h3>
-        <ul>
-          <li><a href="https://oss.beza.gov.bd/" target="_blank" style="color: black;">BEZA ERP (Bangladesh Economic Zones Authority)</a></li>
-          <li><a href="https://icpc.green.edu.bd/" target="_blank" style="color: black;">Contest Management System</a></li>
-          <li><a href="https://library.green.edu.bd/" target="_blank" style="color: black;">Library Management System</a></li>
-          <li><a href="https://championacademybd.org/" target="_blank" style="color: black;">School Management System</a></li>
-        </ul>
-      </div>
-      <div class="column">
-        <h3>Languages</h3>
-        <div class="languages">
-          <div><strong>Bangla</strong> <div class="bar"><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span></div><div>Native</div></div>
-          <div><strong>English</strong> <div class="bar"><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span></div><div>Intermediate</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Footer -->
+  <footer>
+    © 2026 Hasan Mahmud All Rights Reserved.
+  </footer>
+
+  <!-- JavaScript Smooth Scroll -->
+  <script>
+    const menuLinks = document.querySelectorAll('.menu a');
+
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        window.scrollTo({
+          top: targetSection.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
